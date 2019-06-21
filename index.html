@@ -31,14 +31,16 @@
 
 Allow the user to choose toppings and size for the pizza they'd like to order.
 Create a pizza object constructor with properties for toppings and size.
-Create a prototype method for the cost of a pizza depending on the selections chosen. Use your own formula for -->
+Create a prototype method for the cost of a pizza depending on the selections chosen. Use your own formula for this.
+Keep it simple to start! You do not need to have a complex formula for determining cost (although you can if you like). The most important part of this code review is using and demonstrating your understanding of constructors and prototypes. -->
 
 
 <body class="bg-light text-dark">
 
   <div class="container" id="top-text">
-    <h1 class="text-dark">Header 1</h1>
-    <p class="text-primary">Please fill out the fields below.</p>
+    <h1 class="text-dark">Welcome to Best Pizza Store</h1>
+    <p class="text-danger">Our pizza is the best in town!.</p>
+    <p class="text-danger">Please make selection below and have your pizza delivered to you in 15 minutes or less.</p>
     <hr>
   </div>
 
@@ -52,7 +54,7 @@ Create a prototype method for the cost of a pizza depending on the selections ch
         <label for="number">Number</label>
         <input type="number" class="form-control" id="number" name="number" placeholder="Number" value="">
       </div>
-      <button type="submit" name="button" class="btn btn-primary">Submit</button>
+      <button type="submit" name="button" class="btn btn-danger">Submit</button>
     </form>
   </div>
 
@@ -63,15 +65,20 @@ Create a prototype method for the cost of a pizza depending on the selections ch
     </div>
   </div>
 
-  <hr class="bg-primary" id="bottom-line">
+  <hr class="bg-danger" id="bottom-line">
 
-  <div class="container text-center">
-    <a href="https://github.com/svsavchuk"><i class="fa fa-github-square fa-2x text-warning" data-toggle="tooltip" data-placement="bottom" title="View source code on GitHub."></i></a>
-    <a href="https://www.linkedin.com/in/serhiy-savchuk-198617183/"><i class="fa fa-linkedin-square fa-2x text-warning" data-toggle="tooltip" data-placement="bottom" title="LinkedIn"></i></a>
-    <a href="mailto:svsavchuk@hotmail.com"><i class="fa fa-envelope-square fa-2x text-warning" data-toggle="tooltip" data-placement="bottom" title="Email"></i></a>
-    <a href="tel:14252996972"><i class="fa fa-phone-square fa-2x text-warning" data-toggle="tooltip" data-placement="bottom" title="Phone"></i></a>
-    <p id="copyright" class="text-primary"><small>© Serhiy Savchuk</small></p>
-  </div>
+  <div class="container">
+    <div class="row text-warning" >
+        <div class="col">
+          <a href="https://github.com/svsavchuk"><i class="fa fa-github-square fa-2x text-warning" data-toggle="tooltip" data-placement="bottom" title="View source code on GitHub."></i></a>
+          <a href="https://www.linkedin.com/in/serhiy-savchuk-198617183/"><i class="fa fa-linkedin-square fa-2x text-warning" data-toggle="tooltip" data-placement="bottom" title="LinkedIn"></i></a>
+          <a href="mailto:svsavchuk@hotmail.com"><i class="fa fa-envelope-square fa-2x text-warning" data-toggle="tooltip" data-placement="bottom" title="Email"></i></a>
+          <a href="tel:14252996972"><i class="fa fa-phone-square fa-2x text-warning" data-toggle="tooltip" data-placement="bottom" title="Phone"></i></a>
+        </div>
+        <div class="col text-right">
+          <p id="copyright" class=""><small>© Serhiy Savchuk</small></p>
+        </div>
+    </div>
 
 </body>
 
