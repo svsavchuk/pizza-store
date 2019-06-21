@@ -1,8 +1,8 @@
-# XX
-_Created xx/xx/2019._
+# Pizza Store
+_Created 06/21/2019._
 
 #### By Serhiy Savchuk
-_This web application xx:_
+_This website is for a pizza company where a user can choose one or more individual toppings (cheese, pepperoni, artichoke, anchovy, etc) and a size to order a pizza and see the final cost._
 
 #### Setup Instructions
 _This page runs in all modern browsers and requires no additional installation packages._
