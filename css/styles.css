@@ -1,12 +1,35 @@
- #top-text {
-  padding-top: 25px;
-  px;
+#top-text {
+ padding-top: 25px;
 }
 
 #bottom-line {
   margin-top: 200px
 }
 
-#result-section {
+/* #result-section {
   display: none;
+} */
+
+#image-header {
+background-image: url("../img/image-header-1.jpg");
+opacity: 1;
+height: 300px;
+min-height: 500px;
+width: 100%;
+background-size: 100%;
+
+/* To center text horizontally and vertically. */
+display: flex;
+align-items: center;
+justify-content: center;;
+
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+}
+
+#image-header h1 {
+  color: white;
+  text-shadow: 0 0 5px #6F7982;
+  font-size: 100px;
 }
