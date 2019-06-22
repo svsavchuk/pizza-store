@@ -12,6 +12,11 @@
   <!-- My own CSS -->
   <link rel="stylesheet" href="css/styles.css">
 
+  <!-- SweetAlert2 replacement for JavaScript alert popup box -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+
+
   <!-- JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -21,6 +26,8 @@
 
   <!-- Font Awesome icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 
   <title>Pizza Store</title>
 
@@ -36,18 +43,18 @@ Keep it simple to start! You do not need to have a complex formula for determini
 
 <body class="bg-light text-dark">
 
-  <div class="container" id="top-text">
+  <div class="container top-text">
     <h1 class="text-success">Welcome to Pizza No.1</h1>
     <p class="text-danger">Our pizza is the best in town!</p>
     <hr>
   </div>
 
   <div class="" id="image-header">
-    <h1>La vita è bella</h1>
+    <!-- <h1>La vita è bella</h1> -->
   </div>
 
-  <div class="container" id="top-text">
-    <p class="text-danger">Please make selection below and have your pizza delivered to you in 15 minutes or less.</p>
+  <div class="container top-text">
+    <p class="text-danger">Please complete the section below to have your pizza baked and delivered to you in 25 minutes or less.</p>
     <hr>
   <div class="container">
 
@@ -55,52 +62,72 @@ Keep it simple to start! You do not need to have a complex formula for determini
     <form id="form1">
 
       <fieldset class="form-group">
-        <div class="row">
-          <legend class="col-form-label col-sm-2 pt-0">Size</legend>
-            <div class="col-sm-10">
-              <div class="form-check">
-                <input class="form-check-input" type="radio"  id="size1" name="size-radio">
-                  <label class = "form-check-label" for="name">Small</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio"  id="size2" name="size-radio">
-                <label class = "form-check-label">Medium</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio"  id="size3" name="size-radio">
-                <label class = "form-check-label">Large</label>
-              </div>
+        <div class="form-row">
+          <legend class="col-form-label col-sm-2 pt-0 text-success">Name</legend>
+          <div class="col">
+            <input type="text" class="form-control" id="input-first-name" placeholder="First name" required value="John">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" id="input-last-name" placeholder="First name" required value="Smith">
+          </div>
+        </div>
+    </fieldset>
+
+      <fieldset class="form-group">
+        <div class="form-row">
+          <legend class="col-form-label col-sm-2 pt-0 text-success">Size</legend>
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="size-radio" value="small" required>
+                <label class = "form-check-label" for="name">Small</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="size-radio" value="medium">
+              <label class = "form-check-label">Medium</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="size-radio" value="large">
+              <label class = "form-check-label">Large</label>
+            </div>
           </div>
         </div>
       </fieldset>
 
       <fieldset class="form-group">
-       <div class="row">
-        <legend class="col-form-label col-sm-2 pt-0">Toppings</legend>
-          <div class="col-sm-10">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox"  id="tomatoes" name="size-radio">
-              <label class = "form-check-label" for="name">Tomatoes</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox"  id="pepperoni" name="size-radio">
-              <label class = "form-check-label">Pepperoni</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox"  id="basil" name="size-radio">
-              <label class = "form-check-label">Basil</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox"  id="bacon" name="size-radio">
-              <label class = "form-check-label">Bacon</label>
-            </div>
+       <div class="form-row">
+        <legend class="col-form-label col-sm-2 pt-0 text-success">Toppings</legend>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="tomatoes" name="topping-checkbox">
+            <label class = "form-check-label" for="name">Tomatoes</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="pepperoni" name="topping-checkbox">
+            <label class = "form-check-label">Pepperoni</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="basil" name="stopping-checkbox">
+            <label class = "form-check-label">Basil</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="bacon" name="topping-checkbox">
+            <label class = "form-check-label">Bacon</label>
+          </div>
           </div>
         </div>
       </fieldset>
 
-      <button type="submit" name="button" class="btn btn-danger">Create pizza</button>
+      <fieldset class="form-group">
+        <div class="form-row">
+          <legend class="col-form-label col-sm-2 pt-0 text-success">Quantity</legend>
+          <div class="col">
+            <input type="number" class="form-control" id="input-quanity" value="1" placeholder="Quantity">
+          </div>
+        </legend>
+        </div>
+      </fieldset>
 
-
+      <button type="submit" name="button" class="btn btn-danger">Place order</button>
 
     </form>
   </div>
@@ -111,7 +138,7 @@ Keep it simple to start! You do not need to have a complex formula for determini
     </div>
   </div>
 
-  <hr class="bg-danger" id="bottom-line">
+  <hr class="" id="bottom-line">
 
   <div class="container">
     <div class="row text-warning" >
