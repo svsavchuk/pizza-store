@@ -53,15 +53,55 @@ Keep it simple to start! You do not need to have a complex formula for determini
 
   <div class="container">
     <form id="form1">
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" name="name" placeholder="Name" value="">
-      </div>
-      <div class="form-group">
-        <label for="number">Number</label>
-        <input type="number" class="form-control" id="number" name="number" placeholder="Number" value="">
-      </div>
-      <button type="submit" name="button" class="btn btn-danger">Submit</button>
+
+      <fieldset class="form-group">
+        <div class="row">
+          <legend class="col-form-label col-sm-2 pt-0">Size</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="radio"  id="size1" name="size-radio">
+                  <label class = "form-check-label" for="name">Small</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio"  id="size2" name="size-radio">
+                <label class = "form-check-label">Medium</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio"  id="size3" name="size-radio">
+                <label class = "form-check-label">Large</label>
+              </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-group">
+       <div class="row">
+        <legend class="col-form-label col-sm-2 pt-0">Toppings</legend>
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox"  id="tomatoes" name="size-radio">
+              <label class = "form-check-label" for="name">Tomatoes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox"  id="pepperoni" name="size-radio">
+              <label class = "form-check-label">Pepperoni</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox"  id="basil" name="size-radio">
+              <label class = "form-check-label">Basil</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox"  id="bacon" name="size-radio">
+              <label class = "form-check-label">Bacon</label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <button type="submit" name="button" class="btn btn-danger">Create pizza</button>
+
+
+
     </form>
   </div>
 

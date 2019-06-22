@@ -9,9 +9,9 @@ Function Pizza (topping, size) {
 
   var tomatoes = {name: "Tomatoes", price: 0.99};
   var pepperoni = {name: "Pepperoni", price: 0.99};
-  var artichoke = {name: "Artichoke", price: 0.99};
-  var cheese = {name: "Cheese", price: 0.99};
-  
+  var bacon = {name: "Bacon", price: 0.99};
+  var basil = {name: "Basil", price: 0.99};
+  var toppings = {}
 
 
   Pizza.prototype.calculateTotal = function() {
